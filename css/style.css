@@ -603,3 +603,23 @@
 .footer-link:active {
   color: #555;
 }
+
+/* scroll to top */
+.scroll-icon-inner {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background-color: rgba(230, 125, 34, 0.7);
+  position: fixed;
+  bottom: 4.8rem;
+  right: 4.8rem;
+  visibility: hidden;
+  transition: all 0.3s;
+  opacity: 2;
+  padding: 1.2rem;
+  color: #fff;
+}
+
+.sticky .scroll-icon-inner {
+  visibility: visible;
+}
