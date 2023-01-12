@@ -8,7 +8,6 @@ let btnNavEl = document.querySelector('.btn-mobile-nav');
 let headerEl = document.querySelector('.header');
 
 btnNavEl.addEventListener('click', () => {
-  console.log('dio can');
   headerEl.classList.toggle('nav-open');
 });
 
