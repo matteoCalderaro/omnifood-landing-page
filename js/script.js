@@ -8,12 +8,16 @@ let btnNavEl = document.querySelector('.btn-mobile-nav');
 let headerEl = document.querySelector('.header');
 
 btnNavEl.addEventListener('click', () => {
+  console.log('dio can');
   headerEl.classList.toggle('nav-open');
 });
 
+//////////////////////////////////////////////////////////////
 // Smooth scrolling animation
-const links = document.querySelectorAll('a:link');
-links.forEach((link) => {
+
+const allLinks = document.querySelectorAll('a:link');
+
+allLinks.forEach((link) => {
   const href = link.getAttribute('href');
 
   if (href === '#') {
@@ -27,10 +31,11 @@ links.forEach((link) => {
       e.preventDefault();
       const section = document.querySelector(href);
       section.scrollIntoView({ behavior: 'smooth' });
-      headerEl.classList.toggle('nav-open');
+      headerEl.classList.remove('nav-open');
     });
   }
 });
+
 ///////////////////////////////////////////////////////////
 // Sticky navigation
 const sectionHeroEl = document.querySelector('.section-hero');
